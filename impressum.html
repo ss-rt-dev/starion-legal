@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impressum – Starion</title>
+<meta name="description" content="Impressum (mentions légales) von Starion nach luxemburgischem Recht.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpolygon points='100,20 169,60 169,140 100,180 31,140 31,60' fill='%233467ce'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0b0f1a;
+  --bg2: #111827;
+  --card: #151c2e;
+  --text: #e8eefc;
+  --muted: #9bb0d0;
+  --accent: #3467ce;
+  --accent-hover: #4a7de0;
+  --border: rgba(227, 240, 255, 0.12);
+  --radius: 14px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Sora", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); }
+.wrap { width: min(1100px, 92%); margin-inline: auto; }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(11, 15, 26, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 0;
+  gap: 1rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+.brand svg { width: 36px; height: 36px; }
+nav { display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap; }
+nav a { color: var(--muted); font-weight: 600; font-size: 0.95rem; }
+nav a:hover, nav a[aria-current="page"] { color: var(--text); }
+main { flex: 1; }
+.band { padding: 3.5rem 0; }
+.head { margin-bottom: 2rem; }
+.head h1 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+.head p { color: var(--muted); max-width: 68ch; }
+.legal-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.9rem;
+  margin-bottom: 1.5rem;
+}
+.legal-box h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  color: var(--text);
+}
+.legal-box h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.2rem 0 0.5rem;
+  color: var(--text);
+}
+.legal-box p, .legal-box li { color: var(--muted); }
+.legal-box p { margin-bottom: 0.7rem; }
+.legal-box p:last-child { margin-bottom: 0; }
+.legal-box strong { color: var(--text); }
+.legal-box a { word-break: break-all; }
+.legal-box ul { margin: 0.2rem 0 0.85rem 1.15rem; }
+.legal-box li { margin-bottom: 0.35rem; }
+.legal-box li:last-child { margin-bottom: 0; }
+.basis {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 0 1.5rem;
+  background: var(--bg2);
+}
+.fcols {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1.75rem;
+}
+.fcols h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.7rem; }
+.fcols a { display: block; color: var(--muted); margin-bottom: 0.35rem; font-size: 0.9rem; }
+.fcols a:hover { color: var(--text); }
+.fcols p { color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem; }
+.legal {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+@media (max-width: 800px) {
+  .fcols { grid-template-columns: 1fr; gap: 1.5rem; }
+  nav { gap: 0.7rem; }
+}
+@media (max-width: 600px) {
+  .bar { flex-direction: column; align-items: flex-start; }
+  nav { width: 100%; justify-content: flex-start; }
+  .band { padding: 2.5rem 0; }
+  .legal-box { padding: 1.35rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a href="/" class="brand" aria-label="Starion Startseite">
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <polygon points="100,20 169,60 169,140 100,180 31,140 31,60" fill="#3467ce"/>
+      </svg>
+      Starion
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="/">Startseite</a>
+      <a href="/funktionen">Funktionen</a>
+      <a href="/dokumentation">Dokumentation</a>
+      <a href="/impressum" aria-current="page">Impressum</a>
+      <a href="/datenschutz">Datenschutz</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="band">
+    <div class="wrap">
+      <div class="head">
+        <h1>Impressum</h1>
+        <p>
+          Mentions légales für die Website und den Discord-Bot Starion.
+          Angegeben ist, was das luxemburgische Recht von einem Anbieter eines
+          Dienstes der Informationsgesellschaft verlangt. Maßgeblich sind die
+          französischen Gesetzestexte im
+          <a href="https://legilux.public.lu/" target="_blank" rel="noopener noreferrer">Journal officiel (Legilux)</a>.
+        </p>
+        <span class="basis">Stand: 27. Oktober 2026</span>
+      </div>
+
+      <div class="legal-box">
+        <h2>Anbieter des Dienstes</h2>
+        <p>
+          Angaben nach Artikel 5 Absatz 1 der loi modifiée du 14 août 2000
+          relative au commerce électronique.
+        </p>
+        <p>
+          <strong>Justin Scheer</strong><br>
+          natürliche Person, niedergelassen in Luxemburg<br>
+          Haaptstrooss 31<br>
+          L-8530 Ell<br>
+          Luxemburg
+        </p>
+        <p>
+          Justin Scheer ist Anbieter dieses Dienstes und für die eigenen
+          Inhalte dieser Website verantwortlich.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>Kontakt</h2>
+        <p>
+          Telefon und E-Mail ermöglichen eine schnelle und unmittelbare
+          Kontaktaufnahme, wie sie Artikel 5 Absatz 1 Buchstabe c der
+          genannten Loi verlangt.
+        </p>
+        <p>
+          <strong>Telefon:</strong><br>
+          <a href="tel:+352621399411">+352 621 399 411</a>
+        </p>
+        <p>
+          <strong>E-Mail:</strong><br>
+          <a href="mailto:teyoorll@gmail.com">teyoorll@gmail.com</a>
+        </p>
+        <p>
+          <strong>Website:</strong><br>
+          <a href="https://starion.stella-host.de" target="_blank" rel="noopener noreferrer">https://starion.stella-host.de</a>
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>Register, Steuer und Erlaubnis</h2>
+        <p>
+          Nach Artikel 5 Absatz 1 Buchstabe d sind diese Angaben nur
+          zu veröffentlichen, soweit sie einschlägig sind
+          (<em>le cas échéant</em>).
+        </p>
+        <ul>
+          <li><strong>Registre de commerce et des sociétés (RCS):</strong> derzeit keine Nummer hinterlegt.</li>
+          <li><strong>TVA-Identifikationsnummer</strong> (Taxe sur la valeur ajoutée): derzeit keine Nummer hinterlegt.</li>
+          <li><strong>Reglementierter Beruf, Berufskammer oder behördliche Zulassung:</strong> nicht einschlägig.</li>
+        </ul>
+        <p>
+          Sobald eine Eintragung im RCS oder eine TVA-Nummer besteht, wird sie
+          an dieser Stelle ergänzt. Eine gewerbliche Tätigkeit kann nach dem
+          Code de commerce eine Registerpflicht und ab dem gesetzlichen
+          Schwellenwert eine TVA-Registrierung auslösen. Hier stehen nur
+          Angaben, die tatsächlich vorliegen.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>Preise und Verträge mit Verbrauchern</h2>
+        <p>
+          Werden Preise oder Bedingungen eines Angebots genannt, insbesondere
+          für Starion Premium, dann klar und eindeutig, einschließlich der
+          Angabe, ob Steuern und weitere Kosten im Preis enthalten sind
+          (Artikel 5 Absatz 2 der Loi du 14 août 2000).
+        </p>
+        <p>
+          Gegenüber Verbrauchern gilt zusätzlich der
+          <strong>Code de la consommation</strong>, vor allem die Regeln über
+          Fernabsatzverträge, sowie die Vorgaben der Loi du 14 août 2000 für
+          auf elektronischem Weg geschlossene Verträge. Vor einem
+          kostenpflichtigen Vertrag werden mindestens mitgeteilt:
+        </p>
+        <ul>
+          <li>Identität, Anschrift und Telefonnummer des Anbieters,</li>
+          <li>die wesentlichen Eigenschaften des Dienstes,</li>
+          <li>der Gesamtpreis oder die Art seiner Berechnung, einschließlich Steuern und weiterer Kosten, soweit sie anfallen,</li>
+          <li>Zahlung, Ausführung, Laufzeit und Kündigung,</li>
+          <li>ob ein Widerrufsrecht besteht,</li>
+          <li>die Vertragssprache: derzeit Deutsch.</li>
+        </ul>
+        <p>
+          Ein Bedienelement, das eine Zahlungspflicht auslöst, ist als solches
+          gekennzeichnet. Solange hier keine TVA-Nummer steht, wird kein
+          gesonderter TVA-Betrag ausgewiesen.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>Widerruf</h2>
+        <p>
+          Bei Fernabsatzverträgen mit Verbrauchern besteht grundsätzlich ein
+          Widerrufsrecht von <strong>14 Kalendertagen</strong> ohne Angabe von
+          Gründen (Code de la consommation).
+        </p>
+        <p>
+          Bei digitalen Inhalten, die nicht auf einem körperlichen Datenträger
+          geliefert werden, und bei digitalen Dienstleistungen erlischt dieses
+          Recht, wenn die Ausführung mit ausdrücklicher vorheriger Zustimmung
+          der Verbraucherin oder des Verbrauchers und mit deren Bestätigung
+          begonnen hat, dass das Widerrufsrecht damit verloren geht. Darauf
+          wird vor Vertragsschluss hingewiesen.
+        </p>
+        <p>
+          Die gesetzlichen Rechte wegen eines Mangels digitaler Inhalte oder
+          digitaler Dienstleistungen bleiben unberührt. Ein vollständiger
+          Haftungsausschluss gegenüber Verbrauchern wird nicht vereinbart.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>Haftung für eigene Inhalte</h2>
+        <p>
+          Der Anbieter ist für die von ihm erstellten Inhalte verantwortlich.
+          Sie werden sorgfältig erstellt. Für Richtigkeit, Vollständigkeit und
+          Aktualität wird keine Gewähr übernommen, soweit das Gesetz eine
+          solche nicht vorschreibt.
+        </p>
+        <p>
+          Das gilt nicht für Vorsatz und grobe Fahrlässigkeit und nicht, soweit
+          zwingendes Recht entgegensteht, insbesondere der Verbraucherschutz.
+          Die deutschen Regeln des Medien- oder Telemediengesetzes gelten für
+          dieses in Luxemburg niedergelassene Angebot nicht.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>Haftung für Links</h2>
+        <p>
+          Diese Website kann auf Angebote Dritter verweisen, darunter Discord.
+          Auf deren Inhalte besteht kein Einfluss. Verantwortlich bleibt der
+          jeweilige Betreiber. Ein Link ist keine Übernahme dieser Inhalte.
+        </p>
+        <p>
+          Bei einem konkreten Hinweis auf eine Rechtsverletzung wird der
+          Verweis geprüft und, wenn die Beanstandung zutrifft, entfernt.
+          Haftungsbeschränkungen für reine Durchleitung, Caching und Hosting
+          gelten nur, soweit der Anbieter insoweit als Vermittler handelt
+          (loi modifiée du 14 août 2000 und die unmittelbar geltende
+          Verordnung (EU) 2022/2065 über digitale Dienste). Für eigene Inhalte
+          gelten sie nicht.
+        </p>
+        <p>
+          Das luxemburgische Recht verlangt kein gesondertes Impressum des
+          technischen Hosters. Verantwortlich für dieses Angebot ist der oben
+          genannte Anbieter.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>Urheberrecht</h2>
+        <p>
+          Texte, Logo, Grafiken, der Bot und die übrige Gestaltung dieser
+          Website unterliegen, soweit Schutz besteht, der loi modifiée du
+          18 avril 2001 sur les droits d’auteur, les droits voisins et les
+          bases de données.
+        </p>
+        <p>
+          Jede Verwertung außerhalb der gesetzlichen Schranken, insbesondere
+          der dort geregelten Zitierfreiheit, braucht die vorherige Zustimmung
+          des Rechteinhabers. Fremde Marken und Werke bleiben bei ihren
+          Inhabern.
+        </p>
+        <p>
+          Discord ist eine Marke von Discord Inc. Starion ist ein unabhängiges
+          Angebot und weder mit Discord Inc. verbunden noch von Discord
+          unterstützt oder betrieben.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>Datenschutz</h2>
+        <p>
+          Verantwortlicher für personenbezogene Daten, die über diese Website
+          und den Bot verarbeitet werden, ist Justin Scheer, erreichbar unter
+          den oben genannten Kontaktdaten.
+        </p>
+        <p>
+          Es gelten die Verordnung (EU) 2016/679 (Datenschutz-Grundverordnung)
+          und die loi du 1<sup>er</sup> août 2018 portant organisation de la
+          Commission nationale pour la protection des données et mise en œuvre
+          du règlement (UE) 2016/679.
+        </p>
+        <p>
+          <strong>Aufsichtsbehörde:</strong><br>
+          Commission nationale pour la protection des données (CNPD)<br>
+          15, boulevard du Jazz<br>
+          L-4370 Belvaux<br>
+          Luxemburg<br>
+          Telefon: <a href="tel:+3522610601">(+352) 26 10 60 1</a><br>
+          <a href="https://cnpd.public.lu/" target="_blank" rel="noopener noreferrer">https://cnpd.public.lu/</a>
+        </p>
+        <p>
+          Die Einzelheiten der Verarbeitung stehen in der
+          <a href="/datenschutz">Datenschutzerklärung</a>.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>Außergerichtliche Streitbeilegung</h2>
+        <p>
+          Die Europäische Online-Streitbeilegungsplattform wird nicht mehr
+          betrieben. Für Verbraucherstreitigkeiten in Luxemburg ist zuständig
+          der Service national du Médiateur de la consommation, eingeführt
+          durch die loi du 17 février 2016 portant introduction du règlement
+          extrajudiciaire des litiges de consommation dans le Code de la
+          consommation.
+        </p>
+        <p>
+          <strong>Service national du Médiateur de la consommation</strong><br>
+          6, rue du Palais de Justice<br>
+          L-1841 Luxemburg<br>
+          Telefon: <a href="tel:+352461311">(+352) 46 13 11</a><br>
+          E-Mail: <a href="mailto:info@mediateurconsommation.lu">info@mediateurconsommation.lu</a><br>
+          <a href="https://mediateurconsommation.public.lu/" target="_blank" rel="noopener noreferrer">https://mediateurconsommation.public.lu/</a>
+        </p>
+        <p>
+          Der Anbieter ist gesetzlich nicht verpflichtet, an einem
+          Schlichtungsverfahren teilzunehmen. Das Recht, die ordentlichen
+          Gerichte anzurufen, bleibt unberührt.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>Anwendbares Recht</h2>
+        <p>
+          Für diesen in Luxemburg niedergelassenen Dienst gilt das Recht des
+          Großherzogtums Luxemburg, unbeschadet des Herkunftslandprinzips der
+          Loi du 14 août 2000.
+        </p>
+        <p>
+          Zwingende Verbraucherschutzvorschriften des Staates, in dem eine
+          Verbraucherin oder ein Verbraucher den gewöhnlichen Aufenthalt hat,
+          bleiben unberührt. Ein ausschließlicher Gerichtsstand zu Lasten von
+          Verbrauchern wird nicht vereinbart.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <h4>Starion</h4>
+        <p>Der Discord-Bot für Tickets, Giveaways, Moderation und vieles mehr.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="/">Startseite</a>
+        <a href="/funktionen">Funktionen</a>
+        <a href="/dokumentation">Dokumentation</a>
+        <a href="/premium">Premium</a>
+        <a href="/status">Status</a>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <a href="/impressum">Impressum</a>
+        <a href="/datenschutz">Datenschutz</a>
+      </div>
+    </div>
+    <div class="legal">© 2026 Starion · Alle Rechte vorbehalten.</div>
+  </div>
+</footer>
+</body>
+</html>
