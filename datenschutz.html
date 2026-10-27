@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutz – Starion</title>
+<meta name="description" content="Datenschutzerklärung von Starion (Website und Discord-Bot) nach DSGVO und luxemburgischem Recht.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpolygon points='100,20 169,60 169,140 100,180 31,140 31,60' fill='%233467ce'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0b0f1a;
+  --bg2: #111827;
+  --card: #151c2e;
+  --text: #e8eefc;
+  --muted: #9bb0d0;
+  --accent: #3467ce;
+  --accent-hover: #4a7de0;
+  --border: rgba(227, 240, 255, 0.12);
+  --radius: 14px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Sora", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); }
+.wrap { width: min(1100px, 92%); margin-inline: auto; }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(11, 15, 26, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 0;
+  gap: 1rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+.brand svg { width: 36px; height: 36px; }
+nav { display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap; }
+nav a { color: var(--muted); font-weight: 600; font-size: 0.95rem; }
+nav a:hover, nav a[aria-current="page"] { color: var(--text); }
+main { flex: 1; }
+.band { padding: 3.5rem 0; }
+.head { margin-bottom: 2rem; }
+.head h1 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+.head p { color: var(--muted); max-width: 68ch; }
+.legal-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.9rem;
+  margin-bottom: 1.5rem;
+}
+.legal-box h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  color: var(--text);
+}
+.legal-box h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.2rem 0 0.5rem;
+  color: var(--text);
+}
+.legal-box p, .legal-box li { color: var(--muted); }
+.legal-box p { margin-bottom: 0.7rem; }
+.legal-box p:last-child { margin-bottom: 0; }
+.legal-box strong { color: var(--text); }
+.legal-box a { word-break: break-all; }
+.legal-box ul { margin: 0.2rem 0 0.85rem 1.15rem; }
+.legal-box li { margin-bottom: 0.35rem; }
+.legal-box li:last-child { margin-bottom: 0; }
+.basis {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 0 1.5rem;
+  background: var(--bg2);
+}
+.fcols {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1.75rem;
+}
+.fcols h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.7rem; }
+.fcols a { display: block; color: var(--muted); margin-bottom: 0.35rem; font-size: 0.9rem; }
+.fcols a:hover { color: var(--text); }
+.fcols p { color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem; }
+.legal {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+@media (max-width: 800px) {
+  .fcols { grid-template-columns: 1fr; gap: 1.5rem; }
+  nav { gap: 0.7rem; }
+}
+@media (max-width: 600px) {
+  .bar { flex-direction: column; align-items: flex-start; }
+  nav { width: 100%; justify-content: flex-start; }
+  .band { padding: 2.5rem 0; }
+  .legal-box { padding: 1.35rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a href="/" class="brand" aria-label="Starion Startseite">
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <polygon points="100,20 169,60 169,140 100,180 31,140 31,60" fill="#3467ce"/>
+      </svg>
+      Starion
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="/">Startseite</a>
+      <a href="/funktionen">Funktionen</a>
+      <a href="/dokumentation">Dokumentation</a>
+      <a href="/impressum">Impressum</a>
+      <a href="/datenschutz" aria-current="page">Datenschutz</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="band">
+    <div class="wrap">
+      <div class="head">
+        <h1>Datenschutzerklärung</h1>
+        <p>
+          Diese Erklärung informiert darüber, wie personenbezogene Daten beim
+          Besuch der Website und bei der Nutzung des Discord-Bots Starion
+          verarbeitet werden. Es gelten die Verordnung (EU) 2016/679
+          (Datenschutz-Grundverordnung, DSGVO) und die loi du 1<sup>er</sup>
+          août 2018 portant organisation de la Commission nationale pour la
+          protection des données et mise en œuvre du règlement (UE) 2016/679.
+        </p>
+        <span class="basis">Stand: 27. Oktober 2026</span>
+      </div>
+
+      <div class="legal-box">
+        <h2>1. Verantwortlicher</h2>
+        <p>
+          <strong>Justin Scheer</strong><br>
+          Haaptstrooss 31<br>
+          L-8530 Ell<br>
+          Luxemburg
+        </p>
+        <p>
+          Telefon: <a href="tel:+352621399411">+352 621 399 411</a><br>
+          E-Mail: <a href="mailto:teyoorll@gmail.com">teyoorll@gmail.com</a><br>
+          Website: <a href="https://starion.stella-host.de" target="_blank" rel="noopener noreferrer">https://starion.stella-host.de</a>
+        </p>
+        <p>
+          Weitere Angaben stehen im <a href="/impressum">Impressum</a>.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>2. Geltungsbereich</h2>
+        <p>Diese Erklärung gilt für:</p>
+        <ul>
+          <li>die Website von Starion und zugehörige Unterseiten (z.&nbsp;B. Dokumentation, Dashboard),</li>
+          <li>den Discord-Bot Starion und die damit verbundenen Funktionen (u.&nbsp;a. Tickets, Moderation, Giveaways, Levels, Logs, Premium),</li>
+          <li>die Kommunikation mit dem Verantwortlichen über die angegebenen Kontaktwege.</li>
+        </ul>
+        <p>
+          Discord selbst ist ein eigener Dienst der Discord Inc. Für die
+          Nutzung von Discord gelten zusätzlich die Datenschutzbestimmungen
+          von Discord.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>3. Welche Daten verarbeitet werden</h2>
+        <h3>3.1 Website</h3>
+        <p>Beim Aufruf der Website können technisch erforderlich verarbeitet werden:</p>
+        <ul>
+          <li>IP-Adresse (ggf. gekürzt oder anonymisiert),</li>
+          <li>Datum und Uhrzeit der Anfrage,</li>
+          <li>aufgerufene URL, Referrer, Browser- und Geräteinformationen,</li>
+          <li>Server-Logdaten des Hosters.</li>
+        </ul>
+        <p>
+          Soweit ein Login oder Dashboard über Discord OAuth genutzt wird,
+          können zusätzlich Discord-Benutzer-ID, Benutzername, Avatar,
+          E-Mail-Adresse (soweit Discord sie freigibt) sowie die IDs der
+          verwalteten Server verarbeitet werden.
+        </p>
+
+        <h3>3.2 Discord-Bot</h3>
+        <p>Je nach aktivierter Funktion können verarbeitet werden:</p>
+        <ul>
+          <li>Discord-Benutzer-IDs, Server-IDs, Kanal-IDs und Rollen-IDs,</li>
+          <li>Benutzernamen und Anzeigenamen, soweit sie für die Funktion nötig sind,</li>
+          <li>Nachrichteninhalte, soweit eine Funktion sie verarbeitet (z.&nbsp;B. Automod, Tickets, Logs, Commands),</li>
+          <li>Moderations- und Ticketdaten (z.&nbsp;B. Warnungen, Sperren, Ticketverlauf),</li>
+          <li>Level-, XP- und Ranglisten-Daten,</li>
+          <li>Einstellungen und Konfigurationen des jeweiligen Servers,</li>
+          <li>bei Premium: Angaben zum Abonnementstatus und zur Laufzeit.</li>
+        </ul>
+        <p>
+          Der Bot speichert nur, was für die jeweilige Funktion erforderlich
+          ist. Welche Module aktiv sind, steuern die Server-Admins.
+        </p>
+
+        <h3>3.3 Kontakt</h3>
+        <p>
+          Bei Kontakt per E-Mail, Telefon oder über den Support-Server werden
+          die von dir mitgeteilten Daten (z.&nbsp;B. Name, Discord-Name,
+          Nachricht) verarbeitet, um die Anfrage zu beantworten.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>4. Zwecke und Rechtsgrundlagen</h2>
+        <p>Die Verarbeitung erfolgt zu folgenden Zwecken und auf folgender Grundlage:</p>
+        <ul>
+          <li>
+            <strong>Bereitstellung der Website und des Bots</strong>
+            (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b und lit.&nbsp;f DSGVO) –
+            Vertragserfüllung bzw. berechtigtes Interesse an einem sicheren,
+            funktionsfähigen Dienst.
+          </li>
+          <li>
+            <strong>Server-Konfiguration und Bot-Funktionen</strong>
+            (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b DSGVO) – Erfüllung des
+            Nutzungsvertrags mit dem jeweiligen Server bzw. Nutzer.
+          </li>
+          <li>
+            <strong>Sicherheit, Missbrauchsabwehr, Fehleranalyse</strong>
+            (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO) – berechtigtes
+            Interesse an Stabilität und Schutz der Systeme.
+          </li>
+          <li>
+            <strong>Premium und Zahlungsabwicklung</strong>
+            (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b DSGVO) – Durchführung und
+            Verwaltung kostenpflichtiger Leistungen; Zahlungsdaten werden
+            typischerweise beim Zahlungsdienstleister verarbeitet.
+          </li>
+          <li>
+            <strong>Beantwortung von Anfragen</strong>
+            (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b oder lit.&nbsp;f DSGVO).
+          </li>
+          <li>
+            <strong>Rechtliche Pflichten</strong>
+            (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;c DSGVO), soweit Aufbewahrung
+            oder Auskunft gesetzlich vorgeschrieben ist.
+          </li>
+        </ul>
+      </div>
+
+      <div class="legal-box">
+        <h2>5. Discord</h2>
+        <p>
+          Der Bot läuft auf der Plattform Discord. Discord stellt die
+          Infrastruktur bereit, über die Nachrichten, Mitglieder und Server
+          verwaltet werden. Der Verantwortliche erhält über die Discord-API
+          nur die Daten, die für die Bot-Funktionen notwendig und freigegeben
+          sind.
+        </p>
+        <p>
+          Discord Inc. ist ein eigenständiger Verantwortlicher bzw. Anbieter
+          mit Sitz außerhalb der EU. Für die Datenverarbeitung durch Discord
+          gelten die Bedingungen und die Datenschutzerklärung von Discord.
+          Informationen dazu findest du auf den offiziellen Seiten von Discord.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>6. Hosting und Auftragsverarbeitung</h2>
+        <p>
+          Die Website und ggf. Bot-Infrastruktur werden bei technischen
+          Dienstleistern (Hostern) betrieben. Dabei können Server-Logs und
+          technische Betriebsdaten anfallen. Soweit ein Dienstleister
+          personenbezogene Daten im Auftrag verarbeitet, geschieht das auf
+          Grundlage eines Auftragsverarbeitungsvertrags nach Art.&nbsp;28 DSGVO,
+          soweit erforderlich.
+        </p>
+        <p>
+          Der konkrete Hoster kann sich ändern; die Verantwortung für die
+          eigene Datenverarbeitung bleibt beim oben genannten Verantwortlichen.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>7. Cookies und lokale Speicherung</h2>
+        <p>
+          Die Website kann technisch notwendige Cookies oder lokale
+          Speicherung (z.&nbsp;B. Session, Spracheinstellung, Login-Status,
+          Theme hell/dunkel) verwenden. Diese sind für den Betrieb oder die
+          von dir gewählte Einstellung erforderlich.
+        </p>
+        <p>
+          Soweit keine nicht notwendigen Tracking- oder Marketing-Cookies
+          eingesetzt werden, ist keine Einwilligung dafür erforderlich. Werden
+          später Analyse- oder Marketing-Tools ergänzt, wird diese Erklärung
+          aktualisiert und – soweit nötig – eine Einwilligung eingeholt.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>8. Speicherdauer</h2>
+        <p>Daten werden nur so lange gespeichert, wie es für den jeweiligen Zweck nötig ist:</p>
+        <ul>
+          <li><strong>Server-Logs:</strong> in der Regel wenige Tage bis wenige Wochen, soweit nicht länger zur Sicherheit erforderlich.</li>
+          <li><strong>Bot-Konfiguration und Funktionsdaten:</strong> solange der Bot auf dem Server genutzt wird bzw. bis zur Löschung durch Admins oder den Verantwortlichen.</li>
+          <li><strong>Moderations- und Ticketdaten:</strong> solange sie für den Serverbetrieb benötigt werden oder bis zur Löschung.</li>
+          <li><strong>Premium-Status:</strong> für die Laufzeit des Abos und danach so lange, wie rechtliche Aufbewahrungspflichten bestehen.</li>
+          <li><strong>Kontaktanfragen:</strong> bis zur Erledigung und ggf. kurze Nachhaltung, sofern keine längere Aufbewahrung nötig ist.</li>
+        </ul>
+        <p>
+          Server-Admins können viele botbezogene Daten durch Entfernen des
+          Bots oder Löschen von Konfigurationen beeinflussen. Eine vollständige
+          Löschung kann technisch und rechtlich begrenzt sein (z.&nbsp;B.
+          Backups, gesetzliche Pflichten).
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>9. Empfänger und Drittländer</h2>
+        <p>Personenbezogene Daten können insbesondere übermittelt werden an:</p>
+        <ul>
+          <li>technische Dienstleister (Hosting, Infrastruktur),</li>
+          <li>Discord (Plattform und API),</li>
+          <li>Zahlungsdienstleister bei Premium,</li>
+          <li>Behörden, soweit eine gesetzliche Pflicht besteht.</li>
+        </ul>
+        <p>
+          Bei Discord und manchen Infrastrukturanbietern kann eine
+          Übermittlung in Drittländer (z.&nbsp;B. USA) stattfinden. Soweit
+          erforderlich, stützt sich die Übermittlung auf geeignete Garantien
+          nach Art.&nbsp;44 ff. DSGVO (z.&nbsp;B. Standardvertragsklauseln)
+          oder eine andere gesetzliche Grundlage.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>10. Deine Rechte</h2>
+        <p>Du hast nach der DSGVO insbesondere das Recht auf:</p>
+        <ul>
+          <li>Auskunft (Art.&nbsp;15),</li>
+          <li>Berichtigung (Art.&nbsp;16),</li>
+          <li>Löschung (Art.&nbsp;17),</li>
+          <li>Einschränkung der Verarbeitung (Art.&nbsp;18),</li>
+          <li>Datenübertragbarkeit (Art.&nbsp;20),</li>
+          <li>Widerspruch gegen Verarbeitungen auf Grundlage berechtigter Interessen (Art.&nbsp;21),</li>
+          <li>Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft (Art.&nbsp;7 Abs.&nbsp;3).</li>
+        </ul>
+        <p>
+          Zur Ausübung deiner Rechte genügt eine Nachricht an
+          <a href="mailto:teyoorll@gmail.com">teyoorll@gmail.com</a>.
+          Bitte gib dabei möglichst Server-ID, Benutzer-ID und den konkreten
+          Antrag an, damit die Anfrage zügig bearbeitet werden kann.
+        </p>
+        <p>
+          Du hast außerdem das Recht, dich bei einer Aufsichtsbehörde zu
+          beschweren. Zuständig in Luxemburg ist:
+        </p>
+        <p>
+          <strong>Commission nationale pour la protection des données (CNPD)</strong><br>
+          15, boulevard du Jazz<br>
+          L-4370 Belvaux<br>
+          Luxemburg<br>
+          Telefon: <a href="tel:+3522610601">(+352) 26 10 60 1</a><br>
+          <a href="https://cnpd.public.lu/" target="_blank" rel="noopener noreferrer">https://cnpd.public.lu/</a>
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>11. Pflicht zur Bereitstellung</h2>
+        <p>
+          Die Angabe personenbezogener Daten ist weder gesetzlich noch
+          vertraglich in allen Fällen zwingend. Ohne bestimmte Daten
+          (z.&nbsp;B. Discord-IDs) können einzelne Bot-Funktionen jedoch nicht
+          erbracht werden. Die Website kann in der Regel ohne Login genutzt
+          werden; Login und Dashboard setzen eine Discord-Anmeldung voraus.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>12. Automatisierte Entscheidungen</h2>
+        <p>
+          Es findet keine automatisierte Entscheidungsfindung einschließlich
+          Profiling im Sinne von Art.&nbsp;22 DSGVO statt, die rechtliche
+          Wirkung entfaltet oder dich in ähnlicher Weise erheblich
+          beeinträchtigt. Automatisierte Moderationsfilter (Automod) dienen
+          der Server-Sicherheit und ersetzen keine behördliche oder
+          gerichtliche Entscheidung.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>13. Minderjährige</h2>
+        <p>
+          Der Dienst richtet sich nicht gezielt an Kinder unter 16 Jahren.
+          Personenbezogene Daten Minderjähriger werden nicht wissentlich
+          erhoben, um Angebote an sie zu richten. Server-Admins sind
+          mitverantwortlich dafür, Discord und den Bot im Einklang mit den
+          Discord-Altersregeln und dem geltenden Recht zu nutzen.
+        </p>
+      </div>
+
+      <div class="legal-box">
+        <h2>14. Änderungen</h2>
+        <p>
+          Diese Datenschutzerklärung kann angepasst werden, wenn sich der
+          Dienst, die Technik oder die Rechtslage ändert. Die aktuelle Fassung
+          ist jeweils auf dieser Seite veröffentlicht. Das Datum oben gibt den
+          letzten Stand an.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <h4>Starion</h4>
+        <p>Der Discord-Bot für Tickets, Giveaways, Moderation und vieles mehr.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="/">Startseite</a>
+        <a href="/funktionen">Funktionen</a>
+        <a href="/dokumentation">Dokumentation</a>
+        <a href="/premium">Premium</a>
+        <a href="/status">Status</a>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <a href="/impressum">Impressum</a>
+        <a href="/datenschutz">Datenschutz</a>
+      </div>
+    </div>
+    <div class="legal">© 2026 Starion · Alle Rechte vorbehalten.</div>
+  </div>
+</footer>
+</body>
+</html>
